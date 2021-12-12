@@ -19,6 +19,10 @@ const GithubProvider = ({ children }) => {
     const [isLoading, setIsLoading] = useState(false);
     // check error
     const [error, setError] = useState({ show: false, msg: '' })
+
+    // check demo
+    const [isDemo, setIsDemo] = useState(false);
+
     const searchGithubUser = async (user) => {
         toggleError();
         setIsLoading(true)
@@ -75,6 +79,8 @@ const GithubProvider = ({ children }) => {
             error,
             searchGithubUser,
             isLoading,
+            isDemo,
+            setIsDemo,
         }}>{children}</GithubContext.Provider>
 }
 
