@@ -7,9 +7,9 @@ function App() {
     <AuthWrapper>
       <Router>
         <Switch>
-          <PrivateRoute exact={true} path='/'>
-            <Dashboard></Dashboard>
-          </PrivateRoute>
+          {/* <PrivateRoute exact={true} path='/'> */}
+          <Dashboard path="/" exact={true}></Dashboard>
+          {/* </PrivateRoute> */}
           <Route path='/login'>
             <Login />
           </Route>
