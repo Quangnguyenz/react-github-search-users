@@ -24,6 +24,7 @@ const GithubProvider = ({ children }) => {
     const [isDemo, setIsDemo] = useState(false);
 
     const searchGithubUser = async (user) => {
+        console.log('search function called')
         toggleError();
         setIsLoading(true)
         const response = await axios(`${rootUrl}/users/${user}`).catch((err) => console.log(err))

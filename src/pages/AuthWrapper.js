@@ -7,12 +7,6 @@ function AuthWrapper({ children }) {
   const { isLoading, error } = useAuth0();
   const { isDemo } = React.useContext(GithubContext)
 
-  console.log(isDemo)
-
-  if (isDemo) {
-    return <>{children}</>
-  }
-
   if (isLoading) {
     return (
       <img src={loadingGif} alt="spinner" />
